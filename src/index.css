@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* colors  */
+  /* --white-color: hsl(0, 0, 100%); */
+  /* --black-color: hsl(0, 0, 0%); */
+  /* fonts */
+  --body-font: "Clash Display", sans-serif;
+
+  /* font sizes */
+  /* --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --normal-font-size: 1rem; */
+
+  --shadow-color: #9effd7;
+  --shadow-color-light: rgb(234, 255, 234);
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+/* BASE  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--black-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.home-mockup {
+  background-image: url(./assets/labels.png), url(./assets/can.png);
+  mask-image: url(./assets/can.png);
+  position: absolute;
+  top: calc(50% + 1rem);
+  left: 50%;
+  z-index: 3;
+  width: clamp(9.375rem, 5.5568rem + 19.0909vw, 17rem);
+  transform: translate(-50%, -50%);
+  aspect-ratio: 45 / 83;
+  transition: background-position 1.8s ease-in-out;
+}
+
+.nav-logo {
+  transition: color 1s ease;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 50px;
+
+}
+.nav h2 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.nav i {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+}
+#full {
+  height: 100%;
+  width: 40%;
+  top: 0;
+  right: -40%;
+  backdrop-filter: blur(50px);
+}
+#full h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+#full i {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  padding: 5px;
+  font-weight: 800;
+  font-size: 25px;
+}
+.bg-header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.5s ease 0s;
+  color: black;
+}
+.nav-item:hover {
+  color: white;
+  animation: neon 3s infinite;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+      0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 5px var(--shadow-color-light),
+      0 0 15px var(--shadow-color-light), 0 0 15px var(--shadow-color-light),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color),
+      0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color),
+      0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+      0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
